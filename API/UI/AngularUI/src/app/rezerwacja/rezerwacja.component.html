@@ -1,0 +1,59 @@
+
+<form id='formularzRezerwacji'>
+    <div class="mb-3">
+<label> Email:</label>
+<input type="email" class="form-control" id="i_email">
+</div>
+
+<div class="mb-3">
+    <label> Jacht:</label>
+    <select class="form-select" id="i_jacht">
+        <option value="1">Santa Monica</option>
+        <option value="2">Yggdrasil</option>
+        <option value="3">Snowy Focus</option>
+        <option value="4">Rio</option>
+        <option value="5">Proud Father</option>
+        <option value="6">Est. GBRL</option>
+        <option value="7">Tomahawk</option>
+        <option value="8">Antman</option>   
+    </select>
+    </div>
+
+<div class="mb-3">
+    <label> Data rozpoczęcia wypozyczenia:</label>
+    <input type="datetime-local"  class="form-control" id="i_dataod">
+    </div>
+
+    <div class="mb-3">
+        <label> Data zakończenia wypozyczenia:</label>
+        <input type="datetime-local" class="form-control" id="i_datado">
+        </div>
+
+    <div class="mb-3">
+      <button type='button' class="btn btn-primary" (click)="DodajRezerwacje()">Złóż rezerwację</button>
+        </div>
+</form>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID Rezerwacji</th>
+            <th>DataWypozyczenia</th>
+            <th>DataOddania</th>
+            <th>Email</th>
+            <th>Wypożyczony Jacht</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of RezerwacjaList">
+            <td>{{dataItem.R_ID}}</td>
+            <td>{{dataItem.R_DataWypozyczenia}}</td>
+            <td >{{dataItem.R_DataOddania}}</td>
+            <td>{{dataItem.R_Email}}</td>
+            <td>{{dataItem.R_J_ID}}</td>
+         
+        </tr>
+    </tbody>
+</table>

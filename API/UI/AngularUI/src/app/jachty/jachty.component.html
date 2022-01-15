@@ -1,0 +1,20 @@
+
+<div class="table-responsive-md">
+<table class="table table-dark table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th >Nazwa Jachtu</th>
+            <th>Cena Na Dzień</th>
+            <th>Zdjęcie</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of JachtyList">
+            <td>{{dataItem.J_Nazwa}}</td>
+            <td>{{dataItem.J_CenaNaDzien}}</td>
+            <td><img class="img-fluid rounded mx-auto d-block"  src="{{zdjeciasciezka}}{{dataItem.J_Nazwa}}.jpg"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
